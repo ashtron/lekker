@@ -1,4 +1,4 @@
-A userscript for displaying the total runtime of all videos in a playlist.
+A userscript for displaying the total runtime of all videos in playlists on [Invidious](https://github.com/iv-org/invidious) instances.
 
 ![Proof of concept screenshot](./screenshots/demo-screenshot.png)
 
