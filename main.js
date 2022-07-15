@@ -1,15 +1,14 @@
-const getRandomNumber = () => {
-    return Math.floor(Math.random() * 60)
-}
+// ==UserScript==
+// @name        Invidious playlist length checker
+// @description Display total length for playlists on Invidious
+// @namespace   ashtron
+// @include     /http.+invidious.+\/playlist.*/
+// @version     1
+// @author      ashtron
+// @license MIT
+// ==/UserScript==
 
-const generateLength = () => {
-    let minutes = getRandomNumber()
-    let seconds = getRandomNumber()
-
-    return `${minutes}:${seconds}`
-}
-
-function formatTime(seconds) {
+const formatTime = (seconds) => {
     return [
         parseInt(seconds / 60 / 60),
         parseInt(seconds / 60 % 60),
@@ -22,9 +21,6 @@ function formatTime(seconds) {
 const lengthElements = Array.from(document.getElementsByClassName("length"))
 const lengths = lengthElements.map(element => element.textContent)
 
-// for (let i = 0; i < 10; i++)
-//     lengths.push(generateLength())
-
 let seconds = 0
 
 lengths.forEach(len => {
@@ -32,4 +28,12 @@ lengths.forEach(len => {
     seconds += parseInt(parts[0] * 60) + parseInt(parts[1])
 })
 
-console.log(formatTime(seconds))
+const total = formatTime(seconds)
+
+const infoBox = document.getElementsByClassName("pure-g h-box")[1]
+
+infoBox
+    .children[0]
+    .children[1]
+    .innerText
+    += `| ${total}`
