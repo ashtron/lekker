@@ -8,4 +8,4 @@ By default, this script will run on any URL containing the word "invidious." To 
 
 [Greasy Fork](https://greasyfork.org/en/scripts/447887-invidious-playlist-length-checker)
 
-length + checker = lekker
+length + checker = [lekker](https://www.urbandictionary.com/define.php?term=lekker)
