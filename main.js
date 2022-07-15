@@ -3,7 +3,7 @@
 // @description Display total length for playlists on Invidious
 // @namespace   ashtron
 // @include     /http.+invidious.+\/playlist.*/
-// @version     1
+// @version     1.1
 // @author      ashtron
 // @license MIT
 // ==/UserScript==
