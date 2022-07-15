@@ -16,6 +16,7 @@ const formatTime = (seconds) => {
     ]
         .join(":")
         .replace(/\b(\d)\b/g, "0$1")
+        .replace(/^0/, "")
 }
 
 const lengthElements = Array.from(document.getElementsByClassName("length"))
