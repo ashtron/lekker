@@ -7,3 +7,5 @@ By default, this script will run on any URL containing the word "invidious." To 
 ![Proof of concept screenshot](./screenshots/demo-screenshot.png)
 
 [Greasy Fork](https://greasyfork.org/en/scripts/447887-invidious-playlist-length-checker)
+
+length + checker = lekker
